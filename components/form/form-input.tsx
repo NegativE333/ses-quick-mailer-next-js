@@ -8,7 +8,6 @@ type FormInputProps = {
     label?: string;
     type?: string;
     palceholder?: string;
-    defaultValue?: string;
     value?: string;
     onBlur?: () => void;
     onChange?: (e: React.FocusEvent<HTMLInputElement>) => void;
@@ -20,7 +19,6 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
     label,
     type = "text",
     palceholder,
-    defaultValue = "",
     value,
     onBlur,
     onChange,
@@ -44,7 +42,6 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
                     id={id}
                     ref={ref}
                     value={value}
-                    defaultValue={defaultValue}
                     type={type}
                     disabled={pending}
                     onBlur={onBlur}

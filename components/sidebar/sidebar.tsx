@@ -21,8 +21,8 @@ export const Sidebar = async ({
                 href="/"
             >
                 <div className="pt-3 sm:pt-8 pl-1 sm:pl-4 pb-7 flex items-center gap-x-3">
-                    <h1 className={cn("text-2xl font-extrabold bg-rose-500 bg-opacity-50 hover:bg-opacity-75 transition px-3 py-0.5 rounded-full", font.className)}>
-                        Crisis Connect
+                    <h1 className={cn("font-bold text-center border border-gray-400 py-1 rounded-full w-full text-xl", font.className)}>
+                        SES QuickMailer
                     </h1>
                 </div>
             </Link>
