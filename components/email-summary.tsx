@@ -21,7 +21,7 @@ export const EmailSummary = ({
             <div className='flex gap-4 flex-col'>
                 <h2 className='text-xl'>
                     Total Emails :
-                    <span className='font-bold'> {total}</span>
+                    <span className='font-bold'> {verified + unverified}</span>
                 </h2>
                 <h2 className='text-xl'>
                     Verified Emails :
@@ -34,7 +34,7 @@ export const EmailSummary = ({
                 <Separator />
                 <h2 className='text-xl'>
                     Percentage of emails sent successfully :
-                    <span className='font-bold text-gray-700'> {Math.round((verified / total) * 100)} %</span>
+                    <span className='font-bold text-gray-700'> {Math.round((verified / (verified + unverified)) * 100)} %</span>
                 </h2>
             </div>
             <Separator className="my-4"/>

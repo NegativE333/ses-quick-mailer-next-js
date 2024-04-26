@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { FileImage, HeartHandshake, Home, Library, Link2, LinkIcon, ListChecks, MessageSquareWarning, Share2 } from "lucide-react";
+import { BarChart4, FileImage, HeartHandshake, Home, Library, Link2, LinkIcon, ListChecks, MessageSquareWarning, Share2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -28,6 +28,9 @@ export const SidebarItem = ({
     }
     else if (label === "Image template") {
         Icon = <FileImage className={cn("h-6 w-6", active && "text-red-500")} />;
+    }
+    else if (label === "Analytics") {
+        Icon = <BarChart4 className={cn("h-6 w-6", active && "text-red-500")} />;
     }
 
     return (

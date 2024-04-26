@@ -39,6 +39,10 @@ export const Sidebar = async ({
                     label="Image template"
                     href="/temp-2"
                 />
+                <SidebarItem 
+                    label="Analytics"
+                    href="/analytics"
+                />
             </div>
         </div>
     )

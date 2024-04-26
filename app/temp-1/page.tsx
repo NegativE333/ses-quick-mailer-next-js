@@ -64,7 +64,7 @@ const Temp1Page = () => {
                             formData.file = "";
                             toast.success("Emails sent successfully.");
                         })
-                        .catch(() => {
+                        .catch((err) => {
                             toast.error("Something went wrong.");
                         })
                     })
