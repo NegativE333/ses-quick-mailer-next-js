@@ -1,7 +1,6 @@
 import { getCountData, getTemplateTypeCounts } from "@/db/queries";
 import { BarChart } from "./bar-chart";
 import { Separator } from "@/components/ui/separator";
-import {format} from 'date-fns';
 import { PieChart } from "./pie-chart";
 
 const AnalyticsPage = async () => {
@@ -21,6 +20,8 @@ const AnalyticsPage = async () => {
         failureCounts.push(c.failureCount);
         days.push(c.day);
     })
+
+    console.log(days);
 
     return (  
         <div className="flex flex-col gap-16 px-24">

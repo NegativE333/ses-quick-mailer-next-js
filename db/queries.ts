@@ -1,5 +1,6 @@
 import { db } from "@/lib/db";
 import { cache } from "react";
+import {format} from 'date-fns';
 
 export const getCountData = cache(async () => {
     const analyticsData = await db.analytics.groupBy({
@@ -10,14 +11,28 @@ export const getCountData = cache(async () => {
         }
     });
 
-    const groupedData = analyticsData.map(entry => ({
-        day: entry.day,
-        successCount: entry._sum.successCount || 0,
-        failureCount: entry._sum.failureCount || 0
-    }));
+    const formattedData = analyticsData.map(entry => {
+        const date = new Date(entry.day);
+        const formattedDay = format(date, 'dd MMM');
 
-    return { data: groupedData };
+        return {
+            day: formattedDay,
+            successCount: entry._sum.successCount || 0,
+            failureCount: entry._sum.failureCount || 0
+        };
+    });
+
+    formattedData.sort((a, b) => {
+        // Convert 'day' strings back to Date objects for comparison
+        const dateA = new Date(a.day);
+        const dateB = new Date(b.day);
+
+        return dateA.getTime() - dateB.getTime();
+    });
+
+    return { data: formattedData };
 });
+
 
 
 export const getTemplateTypeCounts = cache(async () => {
