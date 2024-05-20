@@ -21,8 +21,6 @@ const AnalyticsPage = async () => {
         days.push(c.day);
     })
 
-    console.log(days);
-
     return (  
         <div className="flex flex-col gap-16 px-24">
             <div className="flex gap-10 items-center justify-between pt-10">
