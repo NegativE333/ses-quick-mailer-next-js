@@ -28,9 +28,11 @@ This project aims to provide a robust and scalable solution for email communicat
    ```
 3. Set up environment variables:Create a .env file in the root directory and add the following variables:
    ```bash
-      AWS_ACCESS_KEY_ID=your-aws-access-key-id
-      AWS_SECRET_ACCESS_KEY=your-aws-secret-access-key
-      AWS_REGION=your-aws-region
+      NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
+      ACCESSKEY=your-aws-access-key-id
+      SECRETKEY=your-aws-secret-access-key
+      REGION=your-aws-region
+      DATABASE_URL=your-postgresql-url
    ```
 4. Run the development server:
    ```bash
