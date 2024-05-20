@@ -15,6 +15,8 @@ This project aims to provide a robust and scalable solution for email communicat
 - Next JS
 - Tailwind CSS
 - AWS SES
+- Prisma
+- PostgreSQL
 
 ## Setup
 1. Clone the repository:
