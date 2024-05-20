@@ -41,3 +41,6 @@ This project aims to provide a robust and scalable solution for email communicat
       npm run dev
    ```
 5. Access the application at http://localhost:3000.
+
+## System Architecture
+![system-dark](https://github.com/NegativE333/ses-quick-mailer-next-js/assets/102456428/a523bade-9a25-49a0-8a60-ed11d1227b89)
